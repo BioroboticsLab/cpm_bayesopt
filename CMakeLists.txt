@@ -36,17 +36,17 @@ CPM_InitModule(${CPM_MODULE_NAME})
 #------------------------------------------------------------------------------
 
 set(BAYESOPT_URL "https://bitbucket.org/nebw/bayesopt/get/4ffbb6f38f46.zip")
-set(BAYESOPT_ZIP "${CMAKE_CURRENT_SOURCE_DIR}/3rdParty/bayesopt.zip")
-set(BAYESOPT_UNPACKED "${CMAKE_CURRENT_SOURCE_DIR}/3rdParty/nebw-bayesopt-4ffbb6f38f46")
+set(BAYESOPT_ZIP "${CMAKE_BINARY_DIR}/3rdParty/bayesopt.zip")
+set(BAYESOPT_UNPACKED "${CMAKE_BINARY_DIR}/3rdParty/nebw-bayesopt-4ffbb6f38f46")
 
-set(REPO_SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/3rdParty/bayesopt")
+set(REPO_SOURCE_DIR "${CMAKE_BINARY_DIR}/3rdParty/bayesopt")
 if(NOT EXISTS ${BAYESOPT_ZIP} OR NOT EXISTS ${REPO_SOURCE_DIR})
     message("Downloading BayesOpt 4ffbb6f")
     file(DOWNLOAD ${BAYESOPT_URL} ${BAYESOPT_ZIP} SHOW_PROGRESS
         EXPECTED_HASH SHA1=1171b4781f3774c1ef12b804975ce93f632472e2)
     execute_process(
         COMMAND ${CMAKE_COMMAND} -E tar -xf ${BAYESOPT_ZIP}
-        WORKING_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/3rdParty/"
+        WORKING_DIRECTORY "${CMAKE_BINARY_DIR_DIR}/3rdParty/"
         RESULT_VARIABLE error_code)
     if(error_code)
         message(FATAL_ERROR "Failed to unpack BayesOpt")
