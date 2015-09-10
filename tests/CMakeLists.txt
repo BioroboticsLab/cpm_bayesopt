@@ -51,7 +51,6 @@ CPM_AddModule("cpm-bayesopt"
 
 CPM_Finish()
 
-
 ########################################################################
 # Setup executable
 

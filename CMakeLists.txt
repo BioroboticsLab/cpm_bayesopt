@@ -62,4 +62,7 @@ set(NLOPT_BUILD_SHARED OFF CACHE BOOL "")
 
 add_subdirectory("${REPO_SOURCE_DIR}" "${REPO_BUILD_DIR}")
 
+get_target_property(BAYESOPT_INCLUDE_DIRECTORIES bayesopt "INCLUDE_DIRECTORIES")
+
 CPM_ExportAdditionalLibraryTarget("bayesopt")
+CPM_ExportAdditionalIncludeDir("${BAYESOPT_INCLUDE_DIRECTORIES}")

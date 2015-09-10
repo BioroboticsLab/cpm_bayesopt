@@ -1,7 +1,7 @@
 #include <cstdlib>
 #include <iostream>
 
-#include <bayesopt/bayesopt.hpp>
+#include <bayesopt.hpp>
 
 int main()
 {
