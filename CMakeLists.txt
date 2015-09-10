@@ -60,8 +60,6 @@ set(BAYESOPT_MATLAB_COMPATIBLE OFF CACHE BOOL "")
 set(NLOPT_BUILD ON CACHE BOOL "")
 set(NLOPT_BUILD_SHARED OFF CACHE BOOL "")
 
-add_subdirectory("${REPO_SOURCE_DIR}" "${REPO_BUILD_DIR})
+add_subdirectory("${REPO_SOURCE_DIR}" "${REPO_BUILD_DIR}")
 
 CPM_ExportAdditionalLibraryTarget("bayesopt")
-
-#get_target_property(BayesOpt_INCLUDE_DIR bayesopt INCLUDE_DIRECTORIES)
