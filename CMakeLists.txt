@@ -46,7 +46,7 @@ if(NOT EXISTS ${BAYESOPT_ZIP} OR NOT EXISTS ${REPO_SOURCE_DIR})
         EXPECTED_HASH SHA1=1171b4781f3774c1ef12b804975ce93f632472e2)
     execute_process(
         COMMAND ${CMAKE_COMMAND} -E tar -xf ${BAYESOPT_ZIP}
-        WORKING_DIRECTORY "${CMAKE_BINARY_DIR_DIR}/3rdParty/"
+        WORKING_DIRECTORY "${CMAKE_BINARY_DIR}/3rdParty/"
         RESULT_VARIABLE error_code)
     if(error_code)
         message(FATAL_ERROR "Failed to unpack BayesOpt")
