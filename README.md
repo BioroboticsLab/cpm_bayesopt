@@ -1,5 +1,7 @@
 # cpm_bayesopt
 
+[![Build Status](https://travis-ci.org/BioroboticsLab/cpm_bayesopt.svg)](https://travis-ci.org/BioroboticsLab/cpm_bayesopt)
+
 A [cpm](https://github.com/iauns/cpm) package for
 [BayesOpt](https://bitbucket.org/rmcantin/bayesopt)
 ```
